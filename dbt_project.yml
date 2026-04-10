@@ -39,7 +39,10 @@ models:
   my_new_project:
     staging:
       +location: europe-west2
+      +schema: zoomcamp
     rdv:
       +location: europe-west2
+      +schema: zoomcamp
     pl:
       +location: europe-west2
+      +schema: zoomcamp
