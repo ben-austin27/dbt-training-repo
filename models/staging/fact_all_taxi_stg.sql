@@ -3,7 +3,12 @@
     incremental_strategy='merge'
 ) }}
 
-select *
+select VendorID
+      ,RatecodeID
+      ,lpep_pickup_datetime
+      ,lpep_dropoff_datetime
+      ,trip_distance
+      ,fare_amount
       ,_FILE_NAME  as source_file,
 from {{source('zoomcamp', 'all_taxi_ext')}}
 
