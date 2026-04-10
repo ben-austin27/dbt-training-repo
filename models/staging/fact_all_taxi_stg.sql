@@ -10,7 +10,7 @@ select VendorID
       ,trip_distance
       ,fare_amount
       ,_FILE_NAME  as source_file
-      ,load_ts as current_timestamp()
+      ,current_timestamp() as load_ts
 from {{source('zoomcamp', 'all_taxi_ext')}}
 
 {% if is_incremental() %}
