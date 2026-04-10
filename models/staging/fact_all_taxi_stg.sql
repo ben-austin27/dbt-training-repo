@@ -9,7 +9,8 @@ select VendorID
       ,lpep_dropoff_datetime
       ,trip_distance
       ,fare_amount
-      ,_FILE_NAME  as source_file,
+      ,_FILE_NAME  as source_file
+      ,load_ts as current_timestamp()
 from {{source('zoomcamp', 'all_taxi_ext')}}
 
 {% if is_incremental() %}
