@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: zoomcamp # what you use in {{ source('zoomcamp', ...) }}
+    database: gbq-analytics 
+    schema: zoomcamp # actual schema in the DB (happens to match here)
+    tables:
+      - name: all_taxi_ext ## this is what you reference in the model
+        identifier: all_taxi_ext ## this is what the table name is in the DB
